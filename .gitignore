@@ -1,0 +1,6 @@
+# Ignore some python stuff
+.venv
+__pycache__
+
+# vscode
+.vscode

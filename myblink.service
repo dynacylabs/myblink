@@ -1,0 +1,12 @@
+[Unit]
+Description=MyBlink Startup Service
+After=network.target
+
+[Service]
+Type=simple
+User=myblink
+ExecStart=/bin/bash /home/myblink/myblink/run.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

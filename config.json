@@ -1,0 +1,13 @@
+{
+    "myblink": {},
+    "blink": {
+        "username": "",
+        "password": "",
+        "blinkpy_conf": ""
+    },
+    "voipms": {
+        "username": "",
+        "password": "",
+        "did": ""
+    }
+}

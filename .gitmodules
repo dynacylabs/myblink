@@ -1,0 +1,6 @@
+[submodule "blinkpy"]
+	path = blinkpy
+	url = https://github.com/austinc3030/blinkpy.git
+[submodule "python-voipms"]
+	path = python-voipms
+	url = https://github.com/austinc3030/python-voipms.git
