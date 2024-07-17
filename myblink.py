@@ -265,6 +265,10 @@ class myblink:
         schedule.every().hour.at("00:00").do(self.snooze_cameras)
 
     def run(self):
+        self.update_thumbnails()
+        self.snooze_cameras()
+        self.rearm_cameras()
+
         log_timer = 0
         while True:
             schedule.run_pending()
