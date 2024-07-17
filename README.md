@@ -14,6 +14,7 @@ python myblink.py
 
 ## Run on Startup
 ```
+chmod +x run.sh
 sudo cp myblink.service /etc/systemd/system/myblink.service
 sudo systemctl daemon-reload
 sudo systemctl enable myblink.service
