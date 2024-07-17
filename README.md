@@ -9,12 +9,10 @@ python -m pip install --upgrade pip
 pip install ./python-voipms
 pip install ./blinkpy
 pip install -r requirements.txt
-python myblink.py
 ```
 
 ## Run on Startup
 ```
-chmod +x run.sh
 sudo cp myblink.service /etc/systemd/system/myblink.service
 sudo systemctl daemon-reload
 sudo systemctl enable myblink.service
