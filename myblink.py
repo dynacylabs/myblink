@@ -90,7 +90,7 @@ class myblink:
     voipms_retry_delay = 3
 
     # Schedule Variables
-    sec_to_next_status = 5 * 60
+    min_to_next_status = 5
 
     class CustomRotatingFileHandler(RotatingFileHandler):
         def doRollover(self):
@@ -274,9 +274,9 @@ class myblink:
             schedule.run_pending()
             next_job_eta = schedule.idle_seconds()
 
-            if next_job_eta is not None and log_timer == self.min_to_next_status:
+            if next_job_eta is not None and log_timer == (self.min_to_next_status * 60):
                 self.logger.info(f"{next_job_eta} seconds until next job")
-            log_timer = log_timer + 1 if log_timer <= self.min_to_next_status else 0
+            log_timer = log_timer + 1 if log_timer <= (self.min_to_next_status * 60) else 0
             time.sleep(1)
 
 
