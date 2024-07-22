@@ -90,7 +90,7 @@ class myblink:
     voipms_retry_delay = 3
 
     # Schedule Variables
-    min_to_next_status = 5
+    sec_to_next_status = 5 * 60
 
     class CustomRotatingFileHandler(RotatingFileHandler):
         def doRollover(self):
