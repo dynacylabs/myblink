@@ -1,0 +1,15 @@
+[Unit]
+Description=myblink
+After=network.target
+StartLimitIntervalSec=1800
+StartLimitBurst=10
+
+[Service]
+ExecStart=/bin/bash /home/myblink/myblink/myblink.sh
+WorkingDirectory=/home/myblink/myblink
+Restart=always
+RestartSec=5
+User=myblink
+
+[Install]
+WantedBy=multi-user.target
