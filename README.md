@@ -6,8 +6,6 @@ git submodule update --init
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-pip install ./python-voipms
-pip install ./blinkpy
 pip install -r requirements.txt
 ```
 
