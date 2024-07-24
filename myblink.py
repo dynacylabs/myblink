@@ -261,8 +261,8 @@ class myblink:
 
     def init_schedule(self):
         schedule.every().hour.at(":00").do(self.update_thumbnails)
-        schedule.every().hour.at(":20").do(self.rearm_cameras)
-        schedule.every().hour.at(":40").do(self.snooze_cameras)
+        schedule.every().hour.at(":00").do(self.rearm_cameras)
+        schedule.every().hour.at(":00").do(self.snooze_cameras)
 
     def run(self):
         log_timer = 0
