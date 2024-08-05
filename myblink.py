@@ -83,6 +83,8 @@ class myblink:
     # Blink Variables
     blink_retry_count = 0
     blink_retry_limit = 3
+    no_snooze_syncs = ["Hobo Cams"]
+    no_snooze_cams = ["Front Door"]
 
     # Voip.ms Variables
     msg_str = "Blink"
@@ -255,9 +257,10 @@ class myblink:
     @async_to_sync
     async def snooze_cameras(self):
         for sync_name, sync in self.blink.sync.items():
-            if not sync_name == "Hobo Cams":
+            if sync_name not in self.no_snooze_syncs:
                 for camera_name, camera in sync.cameras.items():
-                    await camera.async_snooze()
+                    if camera_name not in self.no_snooze_cams:
+                        await camera.async_snooze()
 
     def init_schedule(self):
         schedule.every().hour.at(":00").do(self.update_thumbnails)
