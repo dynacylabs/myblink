@@ -100,7 +100,7 @@ class myblink:
                 self.stream.close()
                 self.stream = None
             if self.backupCount > 0:
-                currentTime = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+                currentTime = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
                 for i in range(self.backupCount - 1, 0, -1):
                     sfn = self.rotation_filename(f"{self.baseFilename}.{i}")
                     dfn = self.rotation_filename(f"{self.baseFilename}.{i + 1}")
