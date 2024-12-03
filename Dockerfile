@@ -7,6 +7,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
 
 # Copy the startup script
+COPY . /app
 COPY ./startup.sh /startup.sh
 RUN chmod +x /startup.sh
 
