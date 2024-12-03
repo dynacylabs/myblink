@@ -10,4 +10,4 @@ RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
 COPY . /app
 
 # Set entry point
-CMD ["/startup.sh"]
+CMD ["./startup.sh"]
