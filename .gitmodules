@@ -1,0 +1,6 @@
+[submodule "blinkpy"]
+	path = blinkpy
+	url = git@github.com:dynacylabs/blinkpy.git
+[submodule "python-voipms"]
+	path = python-voipms
+	url = git@github.com:dynacylabs/python-voipms.git
